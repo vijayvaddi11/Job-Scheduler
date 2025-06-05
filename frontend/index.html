@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>📅 Job Scheduler</h1>
+
+  <form id="jobForm">
+    <label>Type:
+      <select id="type">
+        <option value="hourly">Hourly</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+      </select>
+    </label>
+
+    <label>Hour: <input type="number" id="hour" min="0" max="23" /></label>
+    <label>Minute: <input type="number" id="minute" min="0" max="59" required /></label>
+    <label id="weekdayLabel" style="display:none;">Day (0=Sun, 6=Sat):
+      <input type="number" id="dayOfWeek" min="0" max="6" />
+    </label>
+
+    <button type="submit">Add Job</button>
+  </form>
+
+  <h2>Scheduled Jobs</h2>
+  <ul id="jobList"></ul>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
