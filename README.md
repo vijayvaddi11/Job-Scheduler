@@ -69,6 +69,6 @@ MONGODB_URI=mongodb://localhost:27017/jobscheduler
 4.  ### ▶️ Start the backend
 
 
-npm run dev
+npm start
 
 
